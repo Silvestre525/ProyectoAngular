@@ -1,0 +1,25 @@
+<div class="container">
+  <!-- List of cards -->
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let serie of series | paginate: { itemsPerPage: 7, currentPage: p }">
+      <div class="card">
+        <img class="card-img-top" [src]="serie.image" alt="{{ serie.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ serie.name }}</h5>
+          <p class="card-text">Status: {{ serie.status }}</p>
+          <p class="card-text">Species: {{ serie.species }}</p>
+          <!-- Agrega más detalles según la información que desees mostrar -->
+        </div>
+      </div>
+    </div>
+
+      <!-- Pagination controls -->
+  <div class="row">
+    <div class="col">
+      <pagination-controls (pageChange)="p = $event" class="pagination" previousLabel="Atras" nextLabel="Siguiente"></pagination-controls>
+    </div>
+  </div>
+  </div>
+
+
+</div>
