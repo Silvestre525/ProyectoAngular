@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MoviesService {
 
-  private apiUrl = 'https://rickandmortyapi.com/api/episode/10,28'
+  private apiUrl = 'http://127.0.0.1:8000/movies/'
 
   constructor( private http: HttpClient) {
 
